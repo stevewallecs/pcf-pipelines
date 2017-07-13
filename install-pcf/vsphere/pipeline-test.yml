@@ -3,7 +3,7 @@ resources:
 - name: pcf-pipelines
   type: git
   source:
-    uri: git@github.com:pivotal-cf/pcf-pipelines.git
+    uri: git@github.com:stevewallecs/pcf-pipelines.git
     branch: master
     private_key: {{git_private_key}}
 
@@ -13,4 +13,4 @@ jobs:
   - aggregate:
     - get: pcf-pipelines
   - task: deploy
-    file: pcf-pipelines/install-pcf/vsphere/tasks/import-opsman/task-test.yml    
+    file: pcf-pipelines/install-pcf/vsphere/tasks/import-opsman/task-test.yml
