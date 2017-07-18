@@ -4,8 +4,6 @@ set -eu
 set -x
 
 function check_opsman_available {
-  echo "available"
-  return
   local opsman_domain=$1
 
   if [[ -z $(dig +short $opsman_domain) ]]; then
